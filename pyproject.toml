@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skyrim-downgrader"
+version = "0.1.0"
+description = "CLI that rolls Skyrim Special Edition back to 1.6.1170 via the Steam console download_depot procedure."
+requires-python = ">=3.12"
+dependencies = [
+    "pywinauto>=0.6.8",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pyinstaller>=6.6"]
+
+[project.scripts]
+skyrim-downgrade = "skyrim_downgrader.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["skyrim_downgrader*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

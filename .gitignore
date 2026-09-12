@@ -1,0 +1,11 @@
+__pycache__/
+*.egg-info/
+build/
+dist/
+*.spec
+.pytest_cache/
+test-tmp/
+*.log
+*.out
+*.err
+steam-screen.png
